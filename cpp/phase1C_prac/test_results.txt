@@ -1,0 +1,39 @@
+New Test
+--------
+Sample Frequency: 10000 Hz
+Signal Duration: 0.1 s
+Number of Signal Components: 1
+Signal 0: 1000 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Relative-magnitude threshold: 0.1
+Bin 100, Freq: 1000
+Bin 900, Freq: -1000
+
+New Test
+--------
+Sample Frequency: 10000 Hz
+Signal Duration: 0.1 s
+Number of Signal Components: 2
+Signal 0: 1000 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Signal 1: 750 (Frequency), 0.5 (Amplitude), 0.2 (Phase Angle)
+Relative-magnitude threshold: 0.1
+Bin 75, Freq: 750
+Bin 100, Freq: 1000
+Bin 900, Freq: -1000
+Bin 925, Freq: -750
+
+New Test
+--------
+Sample Frequency: 10000 Hz
+Signal Duration: 0.1 s
+Number of Signal Components: 3
+Signal 0: 1000 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Signal 1: 750 (Frequency), 0.5 (Amplitude), 0.2 (Phase Angle)
+Signal 2: 1120 (Frequency), 0.666 (Amplitude), 0.025 (Phase Angle)
+Relative-magnitude threshold: 0.1
+Bin 75, Freq: 750
+Bin 100, Freq: 1000
+Bin 112, Freq: 1120
+Bin 888, Freq: -1120
+Bin 900, Freq: -1000
+Bin 925, Freq: -750
+
