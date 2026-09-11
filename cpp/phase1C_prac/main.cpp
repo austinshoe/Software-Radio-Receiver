@@ -37,6 +37,11 @@ int main() {
         std::cin >> freqs[i] >> amplitudes[i] >> phases[i];
     }
 
+    std::cout << "Enter the relative-magnitude threshold (between 0 and 1)";
+    
+    double thresh;
+    std::cin >> thresh;
+
     std::vector<double> samples(N);
 
     for (int i = 0; i < N; i++) {
@@ -65,12 +70,15 @@ int main() {
             index_l = i;
         }
     }
-    std::cout << "Largest bin: " << index_l << std::endl;
+    std::vector<int> sig_index(0);
+
+    /* std::cout << "Largest bin: " << index_l << std::endl;
     std::cout << mag[index_l] << " " << mag[N - index_l] << std::endl;
     double dft_freq;
     if (index_l > N / 2) {
         index_l -= N;
     } 
     dft_freq = index_l * f_s / N;
-    std::cout << dft_freq << " Hz" << std::endl;
+    std::cout << dft_freq << " Hz" << std::endl; */
+    // TODO: Detect Maxima using 2 neighboring bins, reject maxima below a threshold thresh
 }
