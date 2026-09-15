@@ -1,0 +1,76 @@
+Observation Duration Test
+--------
+Sample Frequency: 10000 Hz
+Signal Duration: 0.01 s
+Number of Signal Components: 1
+Signal 0: 1037 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Relative-magnitude threshold: 0.1
+Bin 10, Freq: 1000
+Bin 90, Freq: -1000
+
+Observation Duration Test
+--------
+Sample Frequency: 10000 Hz
+Signal Duration: 0.05 s
+Number of Signal Components: 1
+Signal 0: 1037 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Relative-magnitude threshold: 0.1
+Bin 52, Freq: 1040
+Bin 448, Freq: -1040
+
+Observation Duration Test
+--------
+Sample Frequency: 10000 Hz
+Signal Duration: 0.1 s
+Number of Signal Components: 1
+Signal 0: 1037 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Relative-magnitude threshold: 0.1
+Bin 104, Freq: 1040
+Bin 896, Freq: -1040
+
+Observation Duration Test
+--------
+Sample Frequency: 10000 Hz
+Signal Duration: 0.5 s
+Number of Signal Components: 1
+Signal 0: 1037 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Relative-magnitude threshold: 0.1
+Bin 518, Freq: 1036
+Bin 4482, Freq: -1036
+
+Observation Duration Test
+--------
+Sample Frequency: 10000 Hz
+Signal Duration: 1 s
+Number of Signal Components: 1
+Signal 0: 1037 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Relative-magnitude threshold: 0.1
+Bin 1037, Freq: 1037
+Bin 8963, Freq: -1037
+
+Observation Duration Test
+--------
+Sample Frequency: 10000 Hz
+Signal Duration: 0.1 s
+Number of Signal Components: 2
+Signal 0: 1000 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Signal 1: 1020 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Relative-magnitude threshold: 0.1
+Bin 100, Freq: 1000
+Bin 102, Freq: 1020
+Bin 898, Freq: -1020
+Bin 900, Freq: -1000
+
+Observation Duration Test
+--------
+Sample Frequency: 10000 Hz
+Signal Duration: 0.5 s
+Number of Signal Components: 2
+Signal 0: 1000 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Signal 1: 1020 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Relative-magnitude threshold: 0.1
+Bin 500, Freq: 1000
+Bin 510, Freq: 1020
+Bin 4490, Freq: -1020
+Bin 4500, Freq: -1000
+

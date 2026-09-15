@@ -4,6 +4,7 @@
 #include <complex>
 #include <numbers>
 #include <fstream>
+#include <cctype>
 
 double SingleSine(double amplitude, double freq, int i, double f_s, double phase) {
     return amplitude * std::sin(2 * M_PI * freq * (i / f_s) + phase);
@@ -19,27 +20,44 @@ double MultiFreqSine(std::vector<double> &freqs, std::vector<double> &amplitudes
     }
 
 int main() {
-    std::ofstream outFile("test_results.txt", std::ios::app);
+    std::cout << "Record run? (Y/N) ";
+    char yes_no;
+    bool record;
+    std::cin >> yes_no;
+    record = std::tolower(yes_no) =='y';
+    // std::ofstream outFile("test_results.txt", std::ios::app);
+    std::ofstream outFile("observation_duration_results.txt", std::ios::app);
 
     if (!outFile.is_open()) {
         std::cerr << "Error opening file!" << std::endl;
         return 1;
     }
-    outFile << "New Test\n";
-    outFile << "--------\n";
+    if (record) {
+        // outFile << "New Test\n";
+        outFile << "Observation Duration Test\n";
+        outFile << "--------\n";
+    }
     const double f_s = 10000; //sample frequency
-    const double duration = 0.1; // signal duration
+    //const double duration = 0.1; // signal duration
+
+    double duration;
+    std::cout << "Enter signal duration: ";
+    std::cin >> duration;
+
     const int N = (int) (f_s * duration); // number of samples total we'll take over the signal duration
     //const double amplitude = 1;
     // const double freq = 1000;
-    outFile << "Sample Frequency: " << f_s << " Hz\n";
-    outFile << "Signal Duration: " << duration << " s\n";
+    if (record) {
+        outFile << "Sample Frequency: " << f_s << " Hz\n";
+        outFile << "Signal Duration: " << duration << " s\n";
+    }
 
     std::cout << "Enter how many frequencies you want in the signal: ";
     int num_signals;
     std::cin >> num_signals;
-
-    outFile << "Number of Signal Components: " << num_signals << "\n";
+    if (record) {
+        outFile << "Number of Signal Components: " << num_signals << "\n";
+    }
     // const double phase = 0;
     std::vector<double> freqs(num_signals);
     std::vector<double> amplitudes(num_signals);
@@ -49,18 +67,19 @@ int main() {
         std::cout << "Enter signal frequency, amplitude, and phase"
         << "(phase angle): ";
         std::cin >> freqs[i] >> amplitudes[i] >> phases[i];
-
-        outFile << "Signal " << i << ": " << freqs[i] << " (Frequency), " << amplitudes[i] << " (Amplitude), "
-        << phases[i] << " (Phase Angle)\n";
+        if (record) {
+            outFile << "Signal " << i << ": " << freqs[i] << " (Frequency), " << amplitudes[i] << " (Amplitude), "
+            << phases[i] << " (Phase Angle)\n";
+        }
     }
 
     std::cout << "Enter the relative-magnitude threshold (between 0 and 1): ";
 
     double thresh;
     std::cin >> thresh;
-    
-    outFile << "Relative-magnitude threshold: " << thresh << "\n";
-
+    if (record) {
+        outFile << "Relative-magnitude threshold: " << thresh << "\n";
+    }
     std::vector<double> samples(N);
 
     for (int i = 0; i < N; i++) {
@@ -114,10 +133,19 @@ int main() {
             dft_freq = temp_index * f_s / N;
             sig_freq.push_back(dft_freq);
             std::cout << "Bin " << i << ", Freq: " << dft_freq << std::endl;
-            outFile << "Bin " << i << ", Freq: " << dft_freq << "\n";
+            if (record) {
+                outFile << "Bin " << i << ", Freq: " << dft_freq << "\n";
+            }
         }
     }
-    outFile << "\n";
+
+    /*for (int i = 95; i < 110; i++) {
+        std::cout << "Bin " << i << ", Mag: " << mag[i] << std::endl;
+    }*/
+
+    if (record) {
+        outFile << "\n";
+    }
     outFile.close();
     
 

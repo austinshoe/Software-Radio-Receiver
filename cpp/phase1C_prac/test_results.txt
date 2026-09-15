@@ -37,3 +37,13 @@ Bin 888, Freq: -1120
 Bin 900, Freq: -1000
 Bin 925, Freq: -750
 
+New Test
+--------
+Sample Frequency: 10000 Hz
+Signal Duration: 0.1 s
+Number of Signal Components: 1
+Signal 0: 1037 (Frequency), 1 (Amplitude), 0 (Phase Angle)
+Relative-magnitude threshold: 0.1
+Bin 104, Freq: 1040
+Bin 896, Freq: -1040
+
